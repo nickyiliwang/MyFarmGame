@@ -1,4 +1,7 @@
 ﻿using UnityEngine;
+using System;
+using System.Reflection;
+using System.Diagnostics;
 
 // Subscription
 public class MovementAnimationParameterControl : MonoBehaviour
@@ -75,5 +78,50 @@ public class MovementAnimationParameterControl : MonoBehaviour
             animator.SetTrigger(playerSettingsHash.idleUp);
         if (playerSettings.isIdleDown)
             animator.SetTrigger(playerSettingsHash.idleDown);
+
+        // Coming back for you MF
+        // // Iterate through each tool direction in the array
+        // foreach (
+        //     string toolDirection in new string[]
+        //     {
+        //         "isUsingToolLeft",
+        //         "isUsingToolRight",
+        //         "isUsingToolUp",
+        //         "isUsingToolDown",
+        //         "isLiftingToolLeft",
+        //         "isLiftingToolRight",
+        //         "isLiftingToolUp",
+        //         "isLiftingToolDown",
+        //         "isPickingLeft",
+        //         "isPickingRight",
+        //         "isPickingUp",
+        //         "isPickingDown",
+        //         "isSwingingToolLeft",
+        //         "isSwingingToolRight",
+        //         "isSwingingToolUp",
+        //         "isSwingingToolDown",
+        //         "idleLeft",
+        //         "idleRight",
+        //         "idleUp",
+        //         "idleDown",
+        //     }
+        // )
+        // {
+        //     PropertyInfo property = playerSettings.GetType().GetProperty(toolDirection);
+        //     if (
+        //         property != null
+        //         && (bool)
+        //             playerSettings.GetType().GetProperty(toolDirection).GetValue(playerSettings)
+        //     )
+        //     {
+        //         animator.SetTrigger(
+        //             (int)
+        //                 playerSettingsHash
+        //                     .GetType()
+        //                     .GetProperty(toolDirection)
+        //                     .GetValue(playerSettingsHash)
+        //         );
+        //     }
+        // }
     }
 }
