@@ -1,9 +1,10 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 // Subscription
 public class MovementAnimationParameterControl : MonoBehaviour
 {
+    private void AnimationEventPlayFootstepSound() { }
+
     private Animator animator; // Interface to control the animation system
 
     // initialization
@@ -75,6 +76,4 @@ public class MovementAnimationParameterControl : MonoBehaviour
         if (playerSettings.isIdleDown)
             animator.SetTrigger(playerSettingsHash.idleDown);
     }
-
-    private void AnimationEventPlayFootStepSound() { }
 }

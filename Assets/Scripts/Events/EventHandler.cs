@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public delegate void MovementDelegate(AnimationSettings serializedClass);
+﻿public delegate void MovementDelegate(AnimationSettings serializedClass);
 
 public class EventHandler
 {

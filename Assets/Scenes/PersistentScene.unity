@@ -131,8 +131,8 @@ GameObject:
   m_Component:
   - component: {fileID: 136555699}
   - component: {fileID: 136555700}
-  - component: {fileID: 136555702}
   - component: {fileID: 136555701}
+  - component: {fileID: 136555702}
   m_Layer: 0
   m_Name: hat
   m_TagString: Untagged
@@ -451,7 +451,6 @@ GameObject:
   m_Component:
   - component: {fileID: 698440975}
   - component: {fileID: 698440976}
-  - component: {fileID: 698440977}
   m_Layer: 0
   m_Name: equippedItem
   m_TagString: Untagged
@@ -523,18 +522,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &698440977
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 698440974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce371fad32db4274eb77392fcdaa575a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &778171846
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,8 +731,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1050683998}
   - component: {fileID: 1050683999}
-  - component: {fileID: 1050684001}
   - component: {fileID: 1050684000}
+  - component: {fileID: 1050684001}
   m_Layer: 0
   m_Name: arms
   m_TagString: Untagged
@@ -860,6 +847,7 @@ GameObject:
   - component: {fileID: 1200014712}
   - component: {fileID: 1200014711}
   - component: {fileID: 8775504948068986595}
+  - component: {fileID: 1200014714}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -920,6 +908,44 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1200014714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200014710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02284bb1f87cb2f4e935627e4173775f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSettings:
+    xInput: 0
+    yInput: 0
+    isWalking: 0
+    isRunning: 0
+    toolEffect: 0
+    isUsingToolRight: 0
+    isUsingToolLeft: 0
+    isUsingToolUp: 0
+    isUsingToolDown: 0
+    isLiftingToolRight: 0
+    isLiftingToolLeft: 0
+    isLiftingToolUp: 0
+    isLiftingToolDown: 0
+    isPickingLeft: 0
+    isPickingRight: 0
+    isPickingUp: 0
+    isPickingDown: 0
+    isSwingingToolLeft: 0
+    isSwingingToolRight: 0
+    isSwingingToolUp: 0
+    isSwingingToolDown: 0
+    isIdleLeft: 0
+    isIdleRight: 0
+    isIdleUp: 0
+    isIdleDown: 0
 --- !u!1 &1592862725
 GameObject:
   m_ObjectHideFlags: 0
@@ -930,8 +956,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1592862726}
   - component: {fileID: 1592862727}
-  - component: {fileID: 1592862729}
   - component: {fileID: 1592862728}
+  - component: {fileID: 1592862729}
   m_Layer: 0
   m_Name: hair
   m_TagString: Untagged
@@ -1044,8 +1070,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1712596390}
   - component: {fileID: 1712596391}
-  - component: {fileID: 1712596393}
   - component: {fileID: 1712596392}
+  - component: {fileID: 1712596393}
   m_Layer: 0
   m_Name: tool effect
   m_TagString: Untagged
@@ -1158,8 +1184,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2080209073}
   - component: {fileID: 2080209074}
-  - component: {fileID: 2080209076}
   - component: {fileID: 2080209075}
+  - component: {fileID: 2080209076}
   m_Layer: 0
   m_Name: tool
   m_TagString: Untagged
