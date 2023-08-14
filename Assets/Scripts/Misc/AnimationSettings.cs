@@ -2,12 +2,21 @@ using System;
 using UnityEngine;
 
 [Serializable]
+public static class Settings
+{
+    public const float runningSpeed = 5.333f;
+    public const float walkingSpeed = 2.666f;
+}
+
+[Serializable]
 public class AnimationSettings
 {
     public int xInput,
         yInput;
     public bool isWalking,
-        isRunning;
+        isRunning,
+        isCarrying,
+        isIdle;
     public ToolEffect toolEffect;
     public bool isUsingToolRight,
         isUsingToolLeft,
