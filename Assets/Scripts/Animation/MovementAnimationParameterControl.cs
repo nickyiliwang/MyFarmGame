@@ -23,84 +23,57 @@ public class MovementAnimationParameterControl : MonoBehaviour
         EventHandler.MovementEvent -= SetAnimationParameters;
     }
 
-    private void SetAnimationParameters(
-        ToolEffect toolEffect,
-        float inputX,
-        float inputY,
-        bool isWalking,
-        bool isRunning,
-        bool isIdle,
-        bool isCarrying,
-        bool isUsingTool,
-        bool isUsingToolLeft,
-        bool isUsingToolRight,
-        bool isUsingToolUp,
-        bool isUsingToolDown,
-        bool isLiftingToolLeft,
-        bool isLiftingToolRight,
-        bool isLiftingToolUp,
-        bool isLiftingToolDown,
-        bool isPickingLeft,
-        bool isPickingRight,
-        bool isPickingUp,
-        bool isPickingDown,
-        bool isSwingingToolLeft,
-        bool isSwingingToolRight,
-        bool isSwingingToolUp,
-        bool isSwingingToolDown,
-        bool idleLeft,
-        bool idleRight,
-        bool idleUp,
-        bool idleDown
-    )
+    private void SetAnimationParameters(AnimationSettings playerSettings)
     {
-        animator.SetInteger(Settings.toolEffect, (int)toolEffect);
+        AnimationSettingsHash playerSettingsHash = new AnimationSettingsHash();
 
-        animator.SetFloat(Settings.inputX, inputX);
-        animator.SetFloat(Settings.inputY, inputY);
-        animator.SetBool(Settings.isWalking, isWalking);
-        animator.SetBool(Settings.isRunning, isRunning);
+        animator.SetInteger(playerSettingsHash.toolEffect, (int)playerSettings.toolEffect);
 
-        if (isUsingToolLeft)
-            animator.SetTrigger(Settings.isUsingToolLeft);
-        if (isUsingToolRight)
-            animator.SetTrigger(Settings.isUsingToolRight);
-        if (isUsingToolUp)
-            animator.SetTrigger(Settings.isUsingToolUp);
-        if (isUsingToolDown)
-            animator.SetTrigger(Settings.isUsingToolDown);
-        if (isLiftingToolLeft)
-            animator.SetTrigger(Settings.isLiftingToolLeft);
-        if (isLiftingToolRight)
-            animator.SetTrigger(Settings.isLiftingToolRight);
-        if (isLiftingToolUp)
-            animator.SetTrigger(Settings.isLiftingToolUp);
-        if (isLiftingToolDown)
-            animator.SetTrigger(Settings.isLiftingToolDown);
-        if (isPickingLeft)
-            animator.SetTrigger(Settings.isPickingLeft);
-        if (isPickingRight)
-            animator.SetTrigger(Settings.isPickingRight);
-        if (isPickingUp)
-            animator.SetTrigger(Settings.isPickingUp);
-        if (isPickingDown)
-            animator.SetTrigger(Settings.isPickingDown);
-        if (isSwingingToolLeft)
-            animator.SetTrigger(Settings.isSwingingToolLeft);
-        if (isSwingingToolRight)
-            animator.SetTrigger(Settings.isSwingingToolRight);
-        if (isSwingingToolUp)
-            animator.SetTrigger(Settings.isSwingingToolUp);
-        if (isSwingingToolDown)
-            animator.SetTrigger(Settings.isSwingingToolDown);
-        if (idleLeft)
-            animator.SetTrigger(Settings.idleLeft);
-        if (idleRight)
-            animator.SetTrigger(Settings.idleRight);
-        if (idleUp)
-            animator.SetTrigger(Settings.idleUp);
-        if (idleDown)
-            animator.SetTrigger(Settings.idleDown);
+        animator.SetFloat(playerSettingsHash.xInput, playerSettings.xInput);
+        animator.SetFloat(playerSettingsHash.yInput, playerSettings.yInput);
+        animator.SetBool(playerSettingsHash.isWalking, playerSettings.isWalking);
+        animator.SetBool(playerSettingsHash.isRunning, playerSettings.isRunning);
+
+        if (playerSettings.isUsingToolLeft)
+            animator.SetTrigger(playerSettingsHash.isUsingToolLeft);
+        if (playerSettings.isUsingToolRight)
+            animator.SetTrigger(playerSettingsHash.isUsingToolRight);
+        if (playerSettings.isUsingToolUp)
+            animator.SetTrigger(playerSettingsHash.isUsingToolUp);
+        if (playerSettings.isUsingToolDown)
+            animator.SetTrigger(playerSettingsHash.isUsingToolDown);
+        if (playerSettings.isLiftingToolLeft)
+            animator.SetTrigger(playerSettingsHash.isLiftingToolLeft);
+        if (playerSettings.isLiftingToolRight)
+            animator.SetTrigger(playerSettingsHash.isLiftingToolRight);
+        if (playerSettings.isLiftingToolUp)
+            animator.SetTrigger(playerSettingsHash.isLiftingToolUp);
+        if (playerSettings.isLiftingToolDown)
+            animator.SetTrigger(playerSettingsHash.isLiftingToolDown);
+        if (playerSettings.isPickingLeft)
+            animator.SetTrigger(playerSettingsHash.isPickingLeft);
+        if (playerSettings.isPickingRight)
+            animator.SetTrigger(playerSettingsHash.isPickingRight);
+        if (playerSettings.isPickingUp)
+            animator.SetTrigger(playerSettingsHash.isPickingUp);
+        if (playerSettings.isPickingDown)
+            animator.SetTrigger(playerSettingsHash.isPickingDown);
+        if (playerSettings.isSwingingToolLeft)
+            animator.SetTrigger(playerSettingsHash.isSwingingToolLeft);
+        if (playerSettings.isSwingingToolRight)
+            animator.SetTrigger(playerSettingsHash.isSwingingToolRight);
+        if (playerSettings.isSwingingToolUp)
+            animator.SetTrigger(playerSettingsHash.isSwingingToolUp);
+        if (playerSettings.isSwingingToolDown)
+            animator.SetTrigger(playerSettingsHash.isSwingingToolDown);
+        if (playerSettings.isIdleLeft)
+            animator.SetTrigger(playerSettingsHash.idleLeft);
+        if (playerSettings.isIdleRight)
+            animator.SetTrigger(playerSettingsHash.idleRight);
+        if (playerSettings.isIdleUp)
+            animator.SetTrigger(playerSettingsHash.idleUp);
+        if (playerSettings.isIdleDown)
+            animator.SetTrigger(playerSettingsHash.idleDown);
     }
 
     private void AnimationEventPlayFootStepSound() { }

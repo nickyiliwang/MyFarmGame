@@ -21,8 +21,11 @@ used for cases such as movement
 
 EventHandler => Settings => MovementAnimationParameterControl
 
-1. Event handler: creates the delegate and event method, acting as a publisher
+- Event handler: creates the delegate and event method, acting as a proxy for a publisher to use
 
-2. Settings: makes string into hash for efficiency
+- Settings: makes string into hash for efficiency
 
-3. MovementAnimationParameterControl: Subscribes to the movement events on enable and set triggers for when each movement is changed, this will then control the animations.
+- MovementAnimationParameterControl: Subscribes to the movement events on enable and set triggers for when each movement is changed, this will then control the animations.
+
+- PlayerAnimationTest is the real publisher, everything changed on there will be published to the subscribers and trigger animations
+
