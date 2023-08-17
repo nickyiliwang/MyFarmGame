@@ -4,7 +4,8 @@ using UnityEngine;
 [Serializable]
 public static class Settings
 {
-    public const float runningSpeed = 5.333f;
+    // public const float runningSpeed = 5.333f;
+    public const float runningSpeed = 10f;
     public const float walkingSpeed = 2.666f;
 }
 
