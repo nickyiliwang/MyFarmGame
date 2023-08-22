@@ -13,6 +13,7 @@ public class TriggerObscuringItemFader : MonoBehaviour
         {
             for (int i = 0; i < obscuringItemFaders.Length; i++)
             {
+                Debug.Log("Items", obscuringItemFaders[i]);
                 obscuringItemFaders[i].FadeOut();
             }
         }
