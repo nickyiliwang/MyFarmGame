@@ -10,7 +10,7 @@ public abstract class SingletonMonoBehaviour<T> : MonoBehaviour
         get { return instance; }
     }
 
-    // protected: can't be accessed by inheriting classes
+    // protected: is accessible within its own class and any derived classes, but not from outside the class hierarchy.
     // virtual: can be over written by inheriting classes
     protected virtual void Awake()
     {
