@@ -45,15 +45,15 @@ public class ObscuringItemFader : MonoBehaviour
     private IEnumerator FadeOutRoutine()
     {
         float currentAlpha = spriteRenderer.color.a;
-        float alphaDifference = currentAlpha - Settings.targetAlpha;
+        float alphaDifference = currentAlpha - Settings.targetTransparency;
 
-        while (currentAlpha - Settings.targetAlpha > 0.01f)
+        while (currentAlpha - Settings.targetTransparency > 0.01f)
         {
             currentAlpha -= alphaDifference / Settings.fadoOutSeconds * Time.deltaTime;
             spriteRenderer.color = new Color(1f, 1f, 1f, currentAlpha);
             yield return null;
         }
 
-        spriteRenderer.color = new Color(1f, 1f, 1f, Settings.targetAlpha);
+        spriteRenderer.color = new Color(1f, 1f, 1f, Settings.targetTransparency);
     }
 }
