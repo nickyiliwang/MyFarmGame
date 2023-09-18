@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 
-[RequireComponent(typeof(SpriteRenderer))] // Game objects like trees
+[RequireComponent(typeof(SpriteRenderer))]
 public class ObscuringItemFader : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;

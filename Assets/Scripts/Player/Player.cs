@@ -2,6 +2,8 @@
 
 public class Player : SingletonMonoBehaviour<Player>
 {
+    private Camera mainCamera;
+
     private AnimationSettings playerSettings = new AnimationSettings
     {
         isCarrying = false,
@@ -25,6 +27,8 @@ public class Player : SingletonMonoBehaviour<Player>
         base.Awake(); //add some additional functionality to the Awake() method of the base class without completely overriding it
 
         rigidBody = GetComponent<Rigidbody2D>();
+        // et ref to main camera
+        mainCamera = Camera.main;
     }
 
     private void Update()
@@ -139,5 +143,13 @@ public class Player : SingletonMonoBehaviour<Player>
             s.isIdle = false;
             movementSpeed = Settings.runningSpeed;
         }
+    }
+
+    public Vector3 GetPlayerViewPortPosition()
+    {
+        // viewport pos for player:
+        // bottom left (0,0)
+        // top right   (1,1)
+        return mainCamera.WorldToViewportPoint(transform.position);
     }
 }
